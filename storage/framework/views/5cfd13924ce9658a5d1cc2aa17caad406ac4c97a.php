@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\Jose Bunga\OneDrive\Documentos\Laravel\webcr\resources\views/galeriapage/galeria.blade.php ENDPATH**/ ?>
