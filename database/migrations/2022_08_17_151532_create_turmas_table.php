@@ -15,6 +15,11 @@ class CreateTurmasTable extends Migration
     {
         Schema::create('turmas', function (Blueprint $table) {
             $table->id();
+            $table->string("descrição");
+            $table->string("ano_inicio");
+            $table->integer("ano_fim");
+            $table->unsignedBigInteger("classe_id");
+            $table->foreign('classe_id')->references('id')->on('classes');
             $table->timestamps();
         });
     }

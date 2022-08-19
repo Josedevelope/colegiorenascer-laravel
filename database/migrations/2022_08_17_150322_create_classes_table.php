@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEncarregadosTable extends Migration
+class CreateClassesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateEncarregadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('encarregados', function (Blueprint $table) {
+        Schema::create('classes', function (Blueprint $table) {
             $table->id();
-            $table->string("Nome");
-            $table->string("Telemovel");
-            $table->string("senha");
+            $table->string("descrição");
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateEncarregadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('encarregados');
+        Schema::dropIfExists('classes');
     }
 }

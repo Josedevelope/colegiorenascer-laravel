@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 use  App\Http\Controllers\{
+    AlunoController,
     CursoController,
-    homecontroller
+    homecontroller,
+    CandidatoProfessorController
 };
+use App\Models\Aluno;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +21,8 @@ use  App\Http\Controllers\{
 |
 */
 
+
+///ROUTAS DAS VIEWS
 Route::get('/',[homecontroller::class, 'index'])->name('home');;
 
 Route::get('/info-colegiorenascer/contacto', function(){
@@ -37,7 +42,12 @@ Route::get('/galeria', function(){
 Route::get('/evento', function(){
     return view('eventospage.evento');
 })->name('evento');
+//Route::get('/register.candidato', [CursoController::class,'index'])->name('curso');
+
+Route::view('/register/candidato/professor', 'register.candidato.register_candidato_professor');
 
 
 
-Route::get('/curso', [CursoController::class,'index'])->name('curso');
+// ROUTAS PARA CADASTROS / REGISTRO
+Route::get('/register/candidato/aluno',[AlunoController::class,'register'])->name("aluno.register");
+Route::post('/register/candidato',[CandidatoProfessorController::class,'storage'])->name("candidato_professor.storage");

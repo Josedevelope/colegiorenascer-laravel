@@ -15,12 +15,13 @@ class CreateAlunosTable extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
-            $table->string("Nome");
-            $table->string("BI_cedula");
-            $table->string("Morada");
-            $table->string("File_transeferencia");
-            // $table->foreignId('Id_Classe')->constrained();
-            // $table->foreign('Id_Encarregado')->constrained();
+            $table->string("nome");
+            $table->string("bi_cedula");
+            $table->string("morada");
+            $table->string("file_transeferencia");
+            $table->unsignedBigInteger("classe_id");
+            $table->foreign('classe_id')->references('id')->on('classes');
+        
             $table->timestamps();
         });
     }

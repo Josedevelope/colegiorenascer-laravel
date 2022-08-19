@@ -15,6 +15,11 @@ class CreateProfessorsTable extends Migration
     {
         Schema::create('professors', function (Blueprint $table) {
             $table->id();
+            $table->string("nome");
+            $table->string("bi");
+            $table->text("cv_file");
+            $table->string("other_files");
+            $table->string("morada");
             $table->timestamps();
         });
     }
