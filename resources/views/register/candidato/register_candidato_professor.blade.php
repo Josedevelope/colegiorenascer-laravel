@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 candidato-teacher">
             <h4 class="candidato-title pb-10 pt-10 text-center mb-20">Submete aqui os seu dados</h4>
-            <form  name="form_candidato_professors" action="{{route('candidato_professor.storage') }}" method="POST" enctype="multipart/form-data"  class="form-area contact-form mr-2 ml-2">
+            <form  name="form_candidato_professor" action="{{route('candidato_professor.storage') }}" enctype="multipart/form-data"  class="form-area contact-form mr-2 ml-2">
                 @csrf
                 <input type="text" name="nome" id="" class="form-control mb-10 input-teacher" placeholder="Nome Completo" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome Completo'" required aria-required="este campo é obrigatório">
                 <input type="text" name="bi" id="" class="form-control mb-10 input-teacher" placeholder="Nº de bilhete Identidade" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nº de bilhete Identidade'" required aria-required="Este campo é obrigatório">
