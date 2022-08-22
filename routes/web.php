@@ -6,7 +6,8 @@ use  App\Http\Controllers\{
     AlunoController,
     CursoController,
     homecontroller,
-    CandidatoProfessorController
+    CandidatoProfessorController,
+    SetmeController
 };
 use App\Models\Aluno;
 
@@ -42,10 +43,14 @@ Route::get('/galeria', function(){
 Route::get('/evento', function(){
     return view('eventospage.evento');
 })->name('evento');
-//Route::get('/register.candidato', [CursoController::class,'index'])->name('curso');
+Route::get('/register.candidato', [CursoController::class,'index'])->name('curso');
 
-Route::view('/register/candidato/professor', 'register.candidato.register_candidato_professor');
+//Route::view('/register/candidato/professor', 'register.candidato.register_candidato_professor');
 
+Route::get('/register/candidato/professor', [SetmeController::class,'CandidatoProfessor']);
+
+
+Route::get('/register/candidato/professor/disciplina', [SetmeController::class,'disciplina'])->name('setme.disciplina');
 
 
 // ROUTAS PARA CADASTROS / REGISTRO

@@ -16,6 +16,9 @@ class CreateDisciplinasTable extends Migration
         Schema::create('disciplinas', function (Blueprint $table) {
             $table->id();
             $table->string("descrição");
+            $table->unsignedBigInteger("classe_id");
+            $table->foreign('classe_id')->references('id')->on('classes');
+           
             $table->timestamps();
         });
     }

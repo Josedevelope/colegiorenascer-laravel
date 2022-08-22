@@ -4983,3 +4983,19 @@ dl.toggle.time-line:before {
 .footer-bottom .footer-social a:hover {
     background-color: #f7631b
 }
+
+
+/* PARA CANDIDATURA PROFESSOR*/
+
+.candidato-title {
+    background-color: #f7631b!important;
+    color: white;
+}
+
+.candidato-teacher {
+    padding: 50px;
+}
+
+.candidato-teacher .form-select .nice-select {
+    border: 1px solid #f7631!important;
+}

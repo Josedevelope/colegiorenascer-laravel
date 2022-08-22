@@ -56,7 +56,7 @@
         <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
               <div id="logo">
-                <a href="{{route('home')}}"><img src="img/bcc.png" alt="" title="" /></a>
+                <a href="{{route('home')}}"><img src="{{ url('img/bcc.png') }}" alt="" title="" /></a>
               </div>
               <nav id="nav-menu-container">
                 <ul class="nav-menu">
@@ -91,7 +91,7 @@
         </div>
       </header><!-- #header -->
 
-        @yield('content');
+        @yield('content')
 
 
 
@@ -180,7 +180,7 @@
 			</footer>
 			<!-- End footer Area -->
         <script src="{{url('js/vendor/jquery-2.2.4.min.js')}}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="{{url('js/popper.min.js')}}"></script>
         <script src="{{url('js/vendor/bootstrap.min.js')}}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlC3EgSthW9xIMRf_t71KDESi19Ah0j8s"></script>
           <script src="{{url('js/easing.min.js')}}"></script>
@@ -193,5 +193,7 @@
         <script src="{{url('js/owl.carousel.min.js')}}"></script>
         <script src="{{url('js/mail-script.js')}}"></script>
         <script src="{{url('js/main.js')}}"></script>
+
+        @yield('scriptjs')
     </body>
 </html>

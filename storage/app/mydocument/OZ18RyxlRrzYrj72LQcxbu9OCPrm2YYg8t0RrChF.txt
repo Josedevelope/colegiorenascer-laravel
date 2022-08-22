@@ -1,0 +1,12 @@
+
+
+HOST= api.argentina.gob.ar
+➖➖➖➖➖➖➖➖➖➖➖➖
+
+PAYLOAD 2
+
+GET / HTTP/1.1\nHost: www.mardelplata.gob.ar\n\n[split]UNLOCK /? HTTP/1.1\nHost: br1.tcpvpn.com\r\nUpgrade: Websocket\r\n\r\n
+
+
+
+Te regalo nuevo payload y no olvides dejar like en el video
