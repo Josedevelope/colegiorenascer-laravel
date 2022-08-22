@@ -35,8 +35,8 @@
 
                 </div> --}}
 
-                <input type="file" name="cvfile" class="form-control form-control-lg mb-10 input-teacher form-control-file" aria-describedby="cv control">
-
+                {{-- <input type="file" name="cvfile" class="form-control form-control-lg mb-10 input-teacher form-control-file" aria-describedby="cv control">
+ --}}
                 {{-- <div class="custom-file mb-10 input-teacher">
                     <input type="file" name="other_files" class="custom-file-input form-control mb-10 input-teacher" id="other_files">
                     <label class="custom-file-label input-teacher" for="other_files" aria-describedby="other_filesAddon">Outros documentos (Opcional)</label>
@@ -58,6 +58,14 @@
                 </div>
                 <div>
 
+                    <div class="form-group mb-10" x-data="{ fileName: '' }">
+                        <div class="input-group shadow">
+                          <span class="input-group-text px-3 text-muted"><i class="fas fa-image fa-lg"></i></span>
+                          <input type="file" x-ref="file" @change="fileName = $refs.file.files[0].name" name="cvfile" class="d-none">
+                          <input type="text" class="form-control form-control-lg" placeholder="carrega seu cv" x-model="fileName">
+                          <button class="browse btn btn-primary px-4" type="button" x-on:click.prevent="$refs.file.click()"><i class="fas fa-image"></i> buscar</button>
+
+                        </div>
 
                    <center>
                     <button class="primary-btn text-uppercase w-50 mb-20" enabled="true">Enviar</button>
@@ -76,6 +84,7 @@
 
 
 @section('scriptjs')
+<script src="{{url('js/alpinejs.js')}}"></script>
 
 <script>
 
